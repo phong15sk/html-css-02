@@ -1,12 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./assets/css/reset.css">
+    <!-- Font sen -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sen:wght@400..800&display=swap"
+        rel="stylesheet">
+    <!-- Font  Poppins-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sen:wght@400..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
-    <h1>Project 03</h1>
+    <header>
+        <div class="hero">
+            <div class="menu flex_center">
+                <div class="logo">Lesson</div>
+                <div class="tab_bar">
+                    <a href="#!" class="home active">Home</a>
+                    <a href="#!" class="course">Course</a>
+                    <a href="#!" class="pricing">Pricing</a>
+                    <a href="#!" class="reviews">Reviews</a>
+                </div>
+                <button class="btn sign_in_up flex_center">Sign Up</button>
+            </div>
+            <div class="content">
+                <div class="left">
+                    <img src="./assets/img/main-img.jpg" alt="" class="main-img">
+                    <div class="card">
+                        <div class="lst_course">
+                            <div class="course flex design">
+                                <div class="icon_custom flex_center">
+                                    <img src="./assets/img/design_icon.svg" alt="UI/UX Design">
+                                </div>
+                                <div class="infor">
+                                    <p class="count">20 Courses</p>
+                                    <p class="name">UI/UX Design</p>
+                                </div>
+                            </div>
+                            <div class="course flex development">
+                                <div class="icon_custom flex_center">
+                                    <img src="./assets/img/dev_icon.svg" alt="Development">
+                                </div>
+                                <div class="infor">
+                                    <p class="count">20 Courses</p>
+                                    <p class="name">Development</p>
+                                </div>
+                            </div>
+                            <div class="course flex marketing">
+                                <div class="icon_custom flex_center">
+                                    <img src="./assets/img/marketing_icon.svg" alt="Marketing">
+                                </div>
+                                <div class="infor">
+                                    <p class="count">30 Courses</p>
+                                    <p class="name">Marketing</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <h1 class="title">Learn without limits and spread knowledge.</h1>
+                    <p class="subtitle">Build new skills for that “this is my year” feeling with courses, certificates, and degrees from world-class universities and companies.</p>
+                    <div class="action flex">
+                        <button class="btn flex_center see_courses">See Courses</button>
+                        <div class="btn flex_center btn_custom">
+                            <span class="icon_custom"></span>
+                            <span class="btn_text">Watch Video</span>
+                        </div>
+                    </div>
+                    <p>Recent engagement</p>
+                    <div class="statistic flex_center">
+                        <span class="student flex">                 
+                            <p><b class="number">50k</b> students</p>
+                        </span>
+                        <span class="course flex">
+                            <p><b class="number">70+</b> courses</p>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="courses">
+            <div class="header flex">
+                <div class="left">
+                    <h2 class="title">Our popular courses</h2>
+                    <p class="subtitle">Build new skills with new trendy courses and shine for the next future career.</p>
+                </div>
+                <div class="right flex">
+                    <span class="icon_custom_arow left"></span>
+                    <span class="icon_custom_arow right"></span>
+                </div>
+            </div>
+            <div class="lst_course flex">
+                <div class="item">
+                    <img src="./assets/img/web_design_img.jpg" alt="Basic web design">
+                    <div class="content flex">
+                        <h3 class="name_course">Basic web design</h3>
+                        <div class="rate flex">
+                            <div class="start_icon">
+                                <img src="./assets/img/star_icon.svg" alt="start">
+                            </div>
+                            <span class="number">4.5</span>
+                        </div>
+                    </div>
+                    <p class="desc">
+                        Get the best course, gain knowledge and shine for your future career.
+                    </p>
+                    <div class="flex_center">
+                        <span class="price">$120.75</span>
+                        <button class="btn">Book Now</button>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="./assets/img/ui_ux_design.jpg" alt="">
+                    <div class="content flex">
+                        <h3 class="name_course">UI/UX design</h3>
+                        <div class="rate flex">
+                            <div class="start_icon">
+                                <img src="./assets/img/star_icon.svg" alt="start">
+                            </div>
+                            <div class="number">4.5</div>
+                        </div>
+                    </div>
+                    <p class="desc">
+                        Get the best course, gain knowledge and shine for your future career.
+                    </p>
+                    <div class="flex_center">
+                        <span class="price">$120.75</span>
+                        <button class="btn">Book Now</button>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="./assets/img/web_app_design.jpg" alt="">
+                    <div class="content flex">
+                        <h3 class="name_course">Web App design</h3>
+                        <div class="rate flex">
+                            <div class="start_icon">
+                                <img src="./assets/img/star_icon.svg" alt="start">
+                            </div>
+                            <span class="number">4.5</span>
+                        </div>
+                    </div>
+                    <p class="desc">
+                        Get the best course, gain knowledge and shine for your future career.
+                    </p>
+                    <div class="flex_center">
+                        <span class="price">$120.75</span>
+                        <button class="btn">Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="testimnial">
+            <div class="student_infor">
+            </div>
+            <div class="student_assessment"></div>
+        </div>
+    </header>
+    <main>
+    </main>
+    <footer>
+    </footer>
 </body>
+
 </html>
