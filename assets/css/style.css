@@ -48,6 +48,7 @@ button {
     color: #FFFCF4;
     font-weight: 600;
     text-align: center;
+    font-size: 1.4rem;
 }
 
 h1 {
@@ -83,6 +84,11 @@ h3 {
     font-style: normal;
     font-weight: 600;
     line-height: 1.66
+}
+
+b {
+    font-weight: 600;
+    font-size: 1.6rem;
 }
 
 .icon_custom_arow {
@@ -122,6 +128,22 @@ h3 {
     padding: 4px;
     transform: rotate(-45deg);
     cursor: pointer;
+}
+
+.icon_circle_custom {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #634700;
+    display: inline-block;
+    margin-right: 6px;
+}
+.icon_circle_custom.active {
+    background-color: #FFB900;
+}
+
+.toggle_icon {
+   display: flex;
 }
 
 /* Hero */
@@ -314,9 +336,7 @@ h3 {
 .courses {
     padding: 0 var(--default-padding-content);
     height: 1045px;
-}
-.courses .header {
-    margin-top: 200px;
+    padding-top: 200px;
 }
 .courses .header {
     align-items: center;
@@ -383,7 +403,286 @@ h3 {
     font-weight: 600;
     font-size: 1.8rem;
 }
-/* .courses .lst_course .item > div,.desc {
-    margin-left: 22px;
-} */
+/* testimnial */
+.testimnial {
+    height: 380px;
+    padding: 0 var(--default-padding-content);
+    background-color: #2E2100;
+    justify-content: space-between;
+    padding-top: 96px;
+}
+.testimnial .student_infor .student_picture {
+    width: 72px;
+    height: 72px;
+}
 
+.testimnial .student_infor .student_picture > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.testimnial .student_infor .student_name {
+    color: #F7F7F7;
+    font-family: Sen;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.41;
+    margin-top: 18px;
+}
+
+.testimnial .student_infor {
+    color: #BFBCB2;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2.85
+}
+.testimnial .right .student_assessment
+{
+    width: 770px;
+    position: relative;
+}
+.testimnial .right .student_assessment > p {
+    color: white;
+    font-family: Poppins;
+    font-size: 2.6rem;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.53;
+    padding-left: 30px;
+    padding-top: 28px;
+}
+.testimnial .right .student_assessment::before {
+    content: "";
+    width: 30px;
+    height: 28px;
+    background-image: url(../img/quotation_marks_icon.svg);
+    position: absolute;
+}
+
+/* Feature */
+.feature {
+    padding: 0 var(--default-padding-content);
+    padding-top: 200px;
+}
+/* upper_part */
+.feature .upper_part {
+    justify-content: space-between;
+}
+.feature .upper_part .left {
+    width: 570px;
+    height: 438px;
+    justify-content: space-between;
+}
+.feature .upper_part .left .align_bottom_img,.align_top_img {
+    width: 270px;
+    height: 404px;
+}
+.feature .upper_part .left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+}
+.feature .upper_part .left .align_bottom_img{
+    align-self: flex-end;
+}
+.feature .upper_part .right {
+    width: 470px;
+    padding-top: 58px;
+}
+.feature .upper_part .right .subtitle {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+.feature .upper_part .right .btn {
+    background-color: var(--yellow-color);
+    margin-top: 32px;
+    width: 137px;
+}
+
+/* lower_part */
+.feature .lower_part {
+    margin-top: 200px;
+    justify-content: space-between;
+    padding-bottom: 200px;
+}
+.feature .lower_part .left {
+    width: 570px;
+}
+.feature .lower_part .left .title {
+    padding-top: 71px;
+}
+.feature .lower_part .left .subtitle {
+    margin-top: 16px;
+}
+.feature .lower_part .left .btn{
+    margin-top: 32px;
+    background-color: var(--yellow-color);
+}
+.feature .lower_part .right .align_bottom_img {
+    width: 470px;
+    height: 440px;
+}
+.feature .lower_part .right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* Blog */
+.blog {
+   height: 878px;
+   padding: 0 var(--default-padding-content);
+   padding-top: 96px; 
+   background-color: #FFFCF4;
+}
+.blog .title {
+    display: flex;
+    justify-content: center;
+}
+.blog .subtitle {
+    width: 448px;
+    margin: 0 auto;
+    text-align: center;
+}
+.blog .lst_blog {
+    margin-top: 55px;
+    justify-content: space-between;
+}
+.blog .lst_blog .blog_item {
+    width: 370px;
+    height: 467px;
+    border-radius: 16px;
+    background: #FFF;
+    box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
+}
+.blog .lst_blog .blog_item .main_img {
+    height: 250px;
+}
+.blog .lst_blog .blog_item .main_img > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px 12px 0 0;
+    object-fit: cover;
+}
+.blog .lst_blog .blog_item .date_time {
+    font-size: 1.4rem;
+    line-height: 1.85;
+    position: relative;
+    padding-left: 10px;
+}
+.blog .lst_blog .blog_item .date_time::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--yellow-color);
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.blog .lst_blog .blog_item .content {
+    padding: 20px;
+    padding-bottom: 0px;
+}
+.blog .lst_blog .blog_item .line {
+    width: 160px;
+    height: 1px;
+    border-radius: 0.5px;
+    background: #E2DFDA;
+    margin-top: 12px;
+}
+.blog .lst_blog .blog_item .desc {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-top: 12px;
+    line-height: 1.75;
+    color: var(--black-color);
+}
+.blog .lst_blog .blog_item .btn {
+    margin-top: 12px;
+    width: 118px;
+}
+.blog .toggle_icon {
+    margin-top: 38px;
+    justify-content: center;
+}
+footer {
+    height: 427px;
+    background: #2E2100;
+    padding: 0 var(--default-padding-content);
+    padding-top: 96px;
+}
+footer .company_infor {
+    justify-content: space-between;
+    
+}
+
+footer .company_infor b {
+    color: var(--white-color);
+    position: relative;
+}
+
+footer .company_infor p {
+    color: #BFBCB2;
+    font-size: 1.4rem;
+    line-height: 1.85;
+}
+
+footer .company_infor .address {
+    flex-basis: 231px;
+}
+footer .company_infor .address > p > b {
+    font-size: 1.4rem;
+} 
+footer .company_infor .lesson {
+    flex-basis: 267px;
+
+}
+footer .company_infor .lesson .logo {
+    font-size: 1.8rem;
+}
+
+footer .company_infor .lesson .desc {
+    margin-top: 18px;
+}
+footer .company_infor .lesson .social {
+    margin-top: 18px;
+}
+footer .company_infor .lesson .social i {
+    margin-right: 16px;
+    color: var(--white-color);
+}
+
+footer .company_infor> :not(:first-child)>b::after {
+    content: "";
+    width: 130px;
+    height: 1px;
+    background: #59554B;
+    position: absolute;
+    bottom: -18px;
+    left: 0;
+}
+
+footer .company_infor> :not(:first-child)> p:first-of-type {
+    margin-top: 43px;
+}
+footer .company_infor p + p {
+    margin-top: 12px;
+}
+footer .line {
+    padding: 0 var(--default-padding-content);
+    width: 100%;
+    height: 1px;
+    margin-top: 38px;
+    background: #59554B
+}
+footer .copy_right {
+    margin-top: 28px;
+    text-align: center;
+    color: #807D74;
+}
