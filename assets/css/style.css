@@ -7,7 +7,7 @@
 :root {
     --primary-font: "Sen", sans-serif;
     --secondary-font: "Poppins", sans-serif;
-    --default-padding-content: 135px;
+    --default-width-content: 1170px;
     --black-color: #171100;
     --white-color: #FFFFFF;
     --yellow-color: #FFB900;
@@ -144,6 +144,11 @@ b {
 .toggle_icon {
    display: flex;
 }
+.main_content {
+    width: var(--default-width-content);
+    margin-left: auto;
+    margin-right: auto;
+}
 
 @keyframes slideIn {
     from {
@@ -158,7 +163,6 @@ b {
 .hero {
     height: 900px;
     background-color: #FFFCF4;
-    padding: 0 var(--default-padding-content);
 }
 .hero .menu {
     justify-content: space-between;
@@ -342,7 +346,6 @@ b {
 /* Courses */
 
 .courses {
-    padding: 0 var(--default-padding-content);
     height: 1045px;
     padding-top: 200px;
 }
@@ -419,7 +422,6 @@ b {
 /* testimnial */
 .testimnial {
     height: 380px;
-    padding: 0 var(--default-padding-content);
     background-color: #2E2100;
     padding-top: 96px;
 }
@@ -492,7 +494,6 @@ b {
 
 /* Feature */
 .feature {
-    padding: 0 var(--default-padding-content);
     padding-top: 200px;
 }
 /* upper_part */
@@ -566,7 +567,6 @@ b {
 /* Blog */
 .blog {
    height: 878px;
-   padding: 0 var(--default-padding-content);
    padding-top: 96px; 
    background-color: #FFFCF4;
 }
@@ -651,10 +651,9 @@ b {
 footer {
     height: 427px;
     background: #2E2100;
-    padding: 0 var(--default-padding-content);
     padding-top: 96px;
 }
-footer .company_infor {
+footer .company_infor .contact {
     justify-content: space-between;
     
 }
@@ -695,7 +694,7 @@ footer .company_infor .lesson .social i {
     color: var(--white-color);
 }
 
-footer .company_infor> :not(:first-child)>b::after {
+footer .company_infor .contact > :not(:first-child)>b::after {
     content: "";
     width: 130px;
     height: 1px;
@@ -705,18 +704,17 @@ footer .company_infor> :not(:first-child)>b::after {
     left: 0;
 }
 
-footer .company_infor> :not(:first-child)> p:first-of-type {
+footer .company_infor .contact > :not(:first-child)> p:first-of-type {
     margin-top: 43px;
 }
 footer .company_infor p + p {
     margin-top: 12px;
 }
 footer .line {
-    padding: 0 var(--default-padding-content);
     width: 100%;
     height: 1px;
+    background: #59554B;
     margin-top: 38px;
-    background: #59554B
 }
 footer .copy_right {
     margin-top: 28px;
