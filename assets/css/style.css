@@ -18,7 +18,7 @@ html {
     font-size: 62.5%;
 }
 
-body {
+body,main {
     font-size: 1.6rem;
     font-family: var(--secondary-font);
 
@@ -101,6 +101,7 @@ b {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 .icon_custom_arow:hover {
@@ -116,7 +117,6 @@ b {
     border-style: solid;
     padding: 4px;
     transform: rotate(135deg);
-    cursor: pointer;
 }
 
 .icon_custom_arow.right::before {
@@ -127,7 +127,6 @@ b {
     border-style: solid;
     padding: 4px;
     transform: rotate(-45deg);
-    cursor: pointer;
 }
 
 .icon_circle_custom {
@@ -137,15 +136,24 @@ b {
     background-color: #634700;
     display: inline-block;
     margin-right: 6px;
+    cursor: pointer;
 }
 .icon_circle_custom.active {
     background-color: #FFB900;
 }
-
 .toggle_icon {
    display: flex;
 }
 
+@keyframes slideIn {
+    from {
+        transform: translateX(100vw);
+    }
+    to {
+
+        transform: translateX(0);
+    }
+}
 /* Hero */
 .hero {
     height: 900px;
@@ -353,8 +361,11 @@ b {
     width: 458px;
 }
 .courses .lst_course {
-    justify-content: space-between;
+    gap: 30px;
     margin-top: 55px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px;
 }
 .courses .lst_course .item {
     width: 370px;
@@ -362,6 +373,8 @@ b {
     border-radius: 12px;
     background: var(--white-color);
     box-shadow: 0px 18px 36px 0px rgba(0, 0, 0, 0.05);
+    flex-basis: 370px;
+    flex-shrink: 0;
 
 }
 .courses .lst_course .item > img {
@@ -408,8 +421,24 @@ b {
     height: 380px;
     padding: 0 var(--default-padding-content);
     background-color: #2E2100;
-    justify-content: space-between;
     padding-top: 96px;
+}
+.testimnial .lst_testimial .item {
+    display: none;
+    justify-content: space-between;
+}
+.testimnial .lst_testimial .item.active {
+    display: flex;
+    animation-name: showIn;
+    animation-duration: 3s;
+} 
+@keyframes showIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 .testimnial .student_infor .student_picture {
     width: 72px;
@@ -478,6 +507,8 @@ b {
 .feature .upper_part .left .align_bottom_img,.align_top_img {
     width: 270px;
     height: 404px;
+    box-shadow: 0 16px 32px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
 }
 .feature .upper_part .left img {
     width: 100%;
@@ -551,6 +582,12 @@ b {
 .blog .lst_blog {
     margin-top: 55px;
     justify-content: space-between;
+}
+.blog .lst_blog.active {
+    animation-name: slideIn;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-timing-function: linear;
 }
 .blog .lst_blog .blog_item {
     width: 370px;
