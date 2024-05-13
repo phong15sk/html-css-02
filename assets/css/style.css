@@ -159,40 +159,49 @@ b {
         transform: translateX(0);
     }
 }
-/* Hero */
-.hero {
-    height: 900px;
+
+/* header */
+header,.hero {
     background-color: #FFFCF4;
 }
-.hero .menu {
-    justify-content: space-between;
+header {
+    position: sticky;
+    top: 0px;
     padding-top: 36px;
-    font-family: var(--secondary-font);
+    z-index: 10;
 }
-.hero .menu .logo{
+header .menu {
+    justify-content: space-between;
+    font-family: var(--secondary-font);
+    width: var(--default-width-content);
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 10px;
+}
+header .menu .logo{
     font-family: var(--primary-font);
     font-weight: 700;
     font-size: 2.4rem;
     line-height: 1.4;
 }
-.hero .menu .logo {
+header .menu .logo {
     flex: 1;
 }
-.hero .menu .tab_bar {
+header .menu .tab_bar {
     flex-basis: 359px;
     margin-right: 70px;
     display: flex;
     justify-content: space-between;
 }
-.hero .btn.sign_in_up {
+header .btn.sign_in_up {
     width: 144px;
 }
-.hero .tab_bar .active {
+header .tab_bar .active {
     font-weight: 600;
     color: var(--black-color);
     position: relative;
 }
-.hero .tab_bar .active::before {
+header .tab_bar .active::before {
     content: "";
     width: 12px;
     height: 2px;
@@ -201,8 +210,12 @@ b {
     position: absolute;
 }
 
+/* Hero */
+.hero {
+    height: 900px;
+    padding-top: 54px;
+}
 .hero .content {
-    margin-top: 64px;
     display: flex;
     justify-content: space-between;
 }
