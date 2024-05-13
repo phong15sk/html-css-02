@@ -16,12 +16,12 @@
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body,main {
     font-size: 1.6rem;
-    font-family: var(--secondary-font);
-
+    font-family: var(--secondary-font); 
 }
 
 a {
