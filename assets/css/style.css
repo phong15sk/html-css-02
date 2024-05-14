@@ -146,8 +146,20 @@ b {
 }
 .main_content {
     width: var(--default-width-content);
+    max-width: calc(100% - 48px);
     margin-left: auto;
     margin-right: auto;
+}
+.line_clamp {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.line_clamp.lv1 {
+    -webkit-line-clamp: var(--line-clamp, 1);
+}
+.line_clamp.lv2 {
+    -webkit-line-clamp: var(--line-clamp, 2);
 }
 
 @keyframes slideIn {
@@ -166,16 +178,13 @@ header,.hero {
 }
 header {
     position: sticky;
-    top: 0px;
+    top: -28px;
     padding-top: 36px;
     z-index: 10;
 }
 header .menu {
     justify-content: space-between;
     font-family: var(--secondary-font);
-    width: var(--default-width-content);
-    margin-left: auto;
-    margin-right: auto;
     padding-bottom: 10px;
 }
 header .menu .logo{
@@ -212,8 +221,8 @@ header .tab_bar .active::before {
 
 /* Hero */
 .hero {
-    height: 900px;
     padding-top: 54px;
+    padding-bottom: 64px;
 }
 .hero .content {
     display: flex;
@@ -379,26 +388,31 @@ header .tab_bar .active::before {
 .courses .lst_course {
     gap: 30px;
     margin-top: 55px;
-    overflow-x: auto;
+    overflow-x: hidden;
     scroll-behavior: smooth;
-    padding: 20px;
+    padding: 36px 0;
 }
 .courses .lst_course .item {
     width: 370px;
     height: 466px;
     border-radius: 12px;
+    border: 1px solid #E2DFDA;
     background: var(--white-color);
-    box-shadow: 0px 18px 36px 0px rgba(0, 0, 0, 0.05);
     flex-basis: 370px;
     flex-shrink: 0;
-
+}
+.courses .lst_course .item:hover {
+    box-shadow: 0px 18px 36px 0px rgba(0, 0, 0, 0.05);
+    border-color: transparent;
+    z-index: 1;
 }
 .courses .lst_course .item > img {
-    width: 100%;
+    width: calc(100% + 2px) ;
     height: 278px;
     border-radius: 12px 12px 0 0;
     object-fit: cover;
     margin-bottom: 16px;
+    margin-left: -1px;
 }
 
 
